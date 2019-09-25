@@ -6,27 +6,33 @@ body {
 }
 
 header {
-    background-color: rgb(56, 56, 175);
+    background-color: rgb(57, 57, 61);
     height: 10vh;
     width: 100vw;
     color: #fff;
     letter-spacing: 0.1em;
     padding-top: 2%;
+    letter-spacing: 0.2em;
 }
 
 header ul {
     list-style-type: none;
     padding-bottom: 1%;
+    font-weight: 600;
 }
 
 li:first-child {
-    font-size: 24px;
-    font-weight: 900;
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 li {
     display: inline;
     padding-right: 4%;
+}
+
+li:first-of-type {
+    color: rgb(216, 50, 50);
 }
 
 a {
@@ -48,4 +54,23 @@ a {
     height: 400px;
     margin: 12px;
     background-size: 20%;
+}
+
+/*--------- expend the last two boxes: it hasn´t worked...yet -------*/
+@media (min-width: 1500px) {
+    .container:nth-of-child(11), .container:nth-of-child(12) {
+        width: 45%;
+        height: 800px;
+    }
+}
+
+/*-------- just show ArnieBOX in the middle of the header/nav -------*/
+@media (max-width: 700px) {
+    li + li {
+        display: none;
+    }
+
+    li:first-of-type {
+        margin-left: 30%;
+    }
 }
