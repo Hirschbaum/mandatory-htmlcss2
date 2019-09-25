@@ -2,6 +2,7 @@ body {
     max-width: 2000px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(252, 252, 244);
 }
 
 header {
@@ -32,4 +33,19 @@ a {
     text-decoration: none;
     color: #fff;
     display: inline;
+}
+
+/*------------ FILM BOXES -----------*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+}
+
+.box img {
+    width: 250px;
+    height: 400px;
+    margin: 12px;
+    background-size: 20%;
 }
