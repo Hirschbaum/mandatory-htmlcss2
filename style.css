@@ -43,24 +43,32 @@ a {
 
 /*------------ FILM BOXES -----------*/
 
-.container {
+.big-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;   
 }
 
-.box img {
-    width: 250px;
+.box  {
+    width: 260px;
     height: 400px;
     margin: 12px;
-    background-size: 20%;
+    flex-grow: 1;
 }
 
-/*--------- expend the last two boxes: it hasn´t worked...yet -------*/
+.box img {
+    width: 100%;
+}
+
+.small-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*--------- expend the last two boxes-------*/
 @media (min-width: 1500px) {
-    .container:nth-of-child(11), .container:nth-of-child(12) {
-        width: 45%;
-        height: 800px;
+    .small-container .box img {
+        flex-grow: 2;
     }
 }
 
@@ -74,3 +82,4 @@ a {
         margin-left: 30%;
     }
 }
+
