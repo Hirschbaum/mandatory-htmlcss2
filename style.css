@@ -42,7 +42,7 @@ a {
 }
 
 /*------------ FILM BOXES -----------*/
-.big-container {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;   
@@ -60,18 +60,6 @@ a {
     margin: 5px;
 }
 
-.small-container {
-    display: flex;
-    justify-content: center;
-}
-
-/*--------- expend the last two boxes-------*/
-@media (min-width: 1500px) {
-    .small-container .box img {
-        flex-grow: 2;
-    }
-}
-
 /*-------- just show ArnieBOX in the middle of the header/nav -------*/
 @media (max-width: 700px) {
     li + li {
@@ -80,5 +68,21 @@ a {
 
     li:first-of-type {
         margin-left: 28%;
+    }
+}
+
+/*---- changing the size of the boxes ---*/
+
+@media (max-width: 1135px) {
+    .box {
+        width: 200px;
+        height: 340px;
+    }
+}
+
+@media (max-width: 690px) {
+    .box {
+        width: 180px;
+        height: 320px;
     }
 }
